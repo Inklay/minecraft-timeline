@@ -73,6 +73,7 @@ export const drops: Version[] = [
   {
     title: "Spring To Life",
     subtitle: "1.21.70",
+    description: "Friendly mob variants, wildflowers and more",
     type: "drop",
     date: "2025-03-25",
     icon: "/bedrock/version_1_21_70.png",
@@ -99,6 +100,7 @@ export const drops: Version[] = [
   {
     title: "Chase the Skies",
     subtitle: "1.21.90",
+    description: "Dried and happy Ghasts, Vibrant Visuals",
     type: "drop",
     date: "2025-06-17",
     icon: "/bedrock/version_1_21_90.png",
@@ -124,6 +126,7 @@ export const drops: Version[] = [
   {
     title: "The Copper Age",
     subtitle: "1.21.111",
+    description: "Copper Golem, Copper tools & armor, new copper building blocks",
     date: "2025-09-30",
     type: "drop",
     icon: "/bedrock/version_1_21_111.png",
@@ -141,6 +144,7 @@ export const drops: Version[] = [
   {
     title: "Mounts of Mayhem",
     subtitle: "1.21.130",
+    description: "Spear, Nautilus, Camel Husks, Parched",
     date: "2025-12-09",
     type: "drop",
     icon: "/bedrock/version_1_21_130.png",
@@ -164,6 +168,7 @@ export const drops: Version[] = [
   {
     title: "Tiny Takeover",
     subtitle: "26.10",
+    description: "Unique new models for baby animals and mobs, craftable name tags",
     date: "2026-03-24",
     type: "drop",
     icon: "/bedrock/version_26_1.png",
@@ -181,6 +186,7 @@ export const drops: Version[] = [
   {
     title: "Chaos Cubed",
     subtitle: "26.30",
+    description: "Sulfur cubes, sulfur caves biome, sulfur and cinnabar blocks",
     date: "2026-06-16",
     type: "drop",
     icon: "/bedrock/version_26_3.png",

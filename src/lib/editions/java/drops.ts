@@ -78,6 +78,7 @@ export const drops: Version[] = [
   {
     title: "Spring To Life",
     subtitle: "1.21.5",
+    description: "Friendly mob variants, wildflowers and more",
     type: "drop",
     date: "2025-03-25",
     icon: "/java/version_1_21_5.png",
@@ -104,6 +105,7 @@ export const drops: Version[] = [
   {
     title: "Chase the Skies",
     subtitle: "1.21.6",
+    description: "Dried and happy Ghasts, Vibrant Visuals",
     type: "drop",
     date: "2025-06-17",
     icon: "/java/version_1_21_6.png",
@@ -124,6 +126,7 @@ export const drops: Version[] = [
   {
     title: "The Copper Age",
     subtitle: "1.21.9",
+    description: "Copper Golem, Copper tools & armor, new copper building blocks",
     date: "2025-09-30",
     type: "drop",
     icon: "/java/version_1_21_9.png",
@@ -147,6 +150,8 @@ export const drops: Version[] = [
   {
     title: "Mounts of Mayhem",
     subtitle: "1.21.11",
+    description: "Spear, Nautilus, Camel Husks, Parched",
+
     date: "2025-12-09",
     type: "drop",
     icon: "/java/version_1_21_11.png",
@@ -170,6 +175,7 @@ export const drops: Version[] = [
   {
     title: "Tiny Takeover",
     subtitle: "26.1",
+    description: "Unique new models for baby animals and mobs, craftable name tags",
     date: "2026-03-24",
     type: "drop",
     icon: "/java/version_26_1.png",
@@ -188,6 +194,7 @@ export const drops: Version[] = [
   {
     title: "Chaos Cubed",
     subtitle: "26.2",
+    description: "Sulfur cubes, sulfur caves biome, sulfur and cinnabar blocks",
     date: "2026-06-16",
     type: "drop",
     icon: "/java/version_26_2.png",
