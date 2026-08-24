@@ -770,5 +770,5 @@ export const majors: Version[] = [
       { text: "Bogged Skeletons" },
       { text: "Ominous Bottles" }
     ]
-  },
+  }
 ] as const;

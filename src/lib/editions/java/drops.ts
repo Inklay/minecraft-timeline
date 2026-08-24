@@ -166,4 +166,41 @@ export const drops: Version[] = [
       { text: "Netherite Horse Armor" }
     ]
   },
+
+  {
+    title: "Tiny Takeover",
+    subtitle: "26.1",
+    date: "2026-03-24",
+    type: "drop",
+    icon: "/java/version_26_1.png",
+    funFact: "Did you know? This is the first version of the game to use a two-digit year in its versioning system, marking a new era for Minecraft updates.",
+    learnMore: "@Java_Edition_26.1",
+    mainFeatures: [
+      { text: "Unique new models for baby animals and mobs" },
+      { text: "Name Tags are now craftable" },
+    ],
+    minorFeatures: [
+      { text: "Golden dandelion" },
+      { text: "Craftable name tags" },
+    ]
+  },
+
+  {
+    title: "Chaos Cubed",
+    subtitle: "26.2",
+    date: "2026-06-16",
+    type: "drop",
+    icon: "/java/version_26_2.png",
+    learnMore: "@Java_Edition_26.2",
+    mainFeatures: [
+      { text: "Sulfur cubes" },
+      { text: "Sulfur caves biome" },
+      { text: "Sulfur and cinnabar blocks" },
+    ],
+    minorFeatures: [
+      { text: "Experimental vulkan rendering" },
+      { text: "Friends list" },
+      { text: "Geysers" },  
+    ]
+  }
 ] as const;

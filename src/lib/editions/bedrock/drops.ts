@@ -159,5 +159,41 @@ export const drops: Version[] = [
       { text: "Husks riding Camel Husks" },
       { text: "Netherite Horse Armor" }
     ]
+  },
+
+  {
+    title: "Tiny Takeover",
+    subtitle: "26.10",
+    date: "2026-03-24",
+    type: "drop",
+    icon: "/bedrock/version_26_1.png",
+    learnMore: "@Bedrock_Edition_26.10",
+    mainFeatures: [
+      { text: "Unique new models for baby animals and mobs" },
+      { text: "Name Tags are now craftable" },
+    ],
+    minorFeatures: [
+      { text: "Golden dandelion" },
+      { text: "Craftable name tags" },
+    ]
+  },
+
+  {
+    title: "Chaos Cubed",
+    subtitle: "26.30",
+    date: "2026-06-16",
+    type: "drop",
+    icon: "/bedrock/version_26_3.png",
+    learnMore: "@Bedrock_Edition_26.30",
+    mainFeatures: [
+      { text: "Sulfur cubes" },
+      { text: "Sulfur caves biome" },
+      { text: "Sulfur and cinnabar blocks" },
+    ],
+    minorFeatures: [
+      { text: "Experimental vulkan rendering" },
+      { text: "Friends list" },
+      { text: "Geysers" },  
+    ]
   }
 ] as const;
