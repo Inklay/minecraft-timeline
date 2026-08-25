@@ -153,6 +153,7 @@ export const majors: Version[] = [
       { text: 'Doors' },
       { text: 'Buckets' },
       { text: 'Golden Apples' },
+      { text: 'Far Lands' }
     ],
   },
 
@@ -332,7 +333,7 @@ export const majors: Version[] = [
       { text: 'Cave Spiders' },
       { text: 'Swamps' },
       { text: 'More world structures' },
-      { text: 'Far Lands' },
+      { text: 'Removed Far Lands' },
     ],
   },
 
