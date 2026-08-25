@@ -3,10 +3,11 @@
     <ul class="links">
       <li>
         Originally created by <a href="http://github.com/henriquecolini">Henrique Colini</a>
+        now maintained by <a href="http://github.com/inklay">Inklay</a>
       </li>
       <li>
         Contribute on
-        <a href="http://github.com/minecraft-timeline/minecraft-timeline.github.io">GitHub</a>
+        <a href="https://github.com/Inklay/minecraft-timeline">GitHub</a>
       </li>
       <li>
         <a href="https://old.reddit.com/r/Minecraft/comments/akco1t/seeing_as_a_lot_of_redditors_are_coming_back_to/">Original Reddit Post</a>
