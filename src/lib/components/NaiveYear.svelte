@@ -17,7 +17,7 @@
     <div class="number">???</div>
     <div class="ago">Future</div>
   </div>
-  <div class="versions" style="--year: url({'"'}/years/future.png{'"'})">
+  <div class="versions" style="--year: url({'"'}../years/future.png{'"'})">
     {#each versions as version, i}
       <div class="version">
         <Marker {version} />

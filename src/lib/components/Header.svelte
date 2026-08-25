@@ -59,7 +59,7 @@
     {/if}
   </div>
   <div class="content">
-    <img class="logo" src="/logo.png" alt="Minecraft Timeline Logo" />
+    <img class="logo" src="logo.png" alt="Minecraft Timeline Logo" />
   </div>
   <div class="button-box">
     {#if isBig}

@@ -48,7 +48,7 @@
   </div>
   <div
     class="versions"
-    style="--year: url({'"'}/years/{edition.id}/{year}.png{'"'})"
+    style="--year: url({'"'}../years/{edition.id}/{year}.png{'"'})"
   >
     {#each versions as { version, ratio }, i}
       <div class="spacer" style="flex-grow: {spaces[i]};"></div>
