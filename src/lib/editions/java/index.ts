@@ -2,7 +2,7 @@ import type { Edition } from "..";
 import { majors } from "./majors";
 import { minors } from "./minors";
 import { drops } from "./drops";
-import { events } from "./events";
+import { events } from "../common/events";
 import { upcomings } from "./upcomings";
 
 export const java: Edition = {
