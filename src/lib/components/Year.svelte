@@ -43,7 +43,7 @@
     </div>
   </div>
   <div class="versions" style="--year: url(&quot;../years/{edition.id}/{year}.png&quot;)">
-    {#each versions as { version, ratio }, idx (ratio)}
+    {#each versions as { version }, idx (idx)}
       <div class="spacer" style="flex-grow: {spaces[idx]};"></div>
       {#if first && idx === 0}
         <div class="first-message"><span>{edition.firstMessage}</span></div>
