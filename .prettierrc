@@ -1,0 +1,11 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "trailingComma": "es5",
+  "endOfLine": "auto",
+  "printWidth": 300,
+  "plugins": [
+    "prettier-plugin-multiline-arrays"
+  ]
+}

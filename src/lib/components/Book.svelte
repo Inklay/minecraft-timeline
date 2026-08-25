@@ -1,39 +1,39 @@
 <script lang="ts" module>
-  let scrollY = 0;
+  let scrollY = 0
 </script>
 
 <script lang="ts">
-  import { readableType } from '$lib/editions';
-  import { clearReadingVersion, readingVersion } from '$lib/book.svelte';
+  import { readableType } from '$lib/editions'
+  import { clearReadingVersion, readingVersion } from '$lib/book.svelte'
 
   const formatter = new Intl.DateTimeFormat('en-US', {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
-  });
+  })
   function parseDate(str: string) {
     if (str.length === 10) {
-      return Date.parse(str + 'T00:00');
+      return Date.parse(str + 'T00:00')
     } else if (str.length === 16 || str.length === 19) {
-      return Date.parse(str);
+      return Date.parse(str)
     } else {
-      return Date.parse('');
+      return Date.parse('')
     }
   }
   function formatDate(date: string) {
-    return formatter.format(parseDate(date));
+    return formatter.format(parseDate(date))
   }
   $effect(() => {
     if (readingVersion.version) {
-      scrollY = window.scrollY;
-      document.body.style.top = `-${scrollY}px`;
-      document.body.classList.add('noscroll');
+      scrollY = window.scrollY
+      document.body.style.top = `-${scrollY}px`
+      document.body.classList.add('noscroll')
     } else {
-      document.body.style.top = '';
-      document.body.classList.remove('noscroll');
-      document.documentElement.scrollTo(0, scrollY);
+      document.body.style.top = ''
+      document.body.classList.remove('noscroll')
+      document.documentElement.scrollTo(0, scrollY)
     }
-  });
+  })
 </script>
 
 {#if readingVersion.version}
@@ -52,11 +52,7 @@
         {#if !('date' in v) && 'possibleDate' in v}
           <span class="date">{v.possibleDate}</span>
         {/if}
-        <button
-          class="close"
-          aria-label="Close Info Panel"
-          onclick={clearReadingVersion}
-        ></button>
+        <button class="close" aria-label="Close Info Panel" onclick={clearReadingVersion}></button>
       </div>
       <section class="content">
         <header>
@@ -69,20 +65,20 @@
         </header>
         {#if v.funFact}
           <div class="fun-fact">
-            {#each v.funFact.split('\n') as funFact}
+            {#each v.funFact.split('\n') as funFact, idx (idx)}
               <p>{funFact}</p>
             {/each}
           </div>
         {/if}
         {#if v.longDescription}
-          {#each v.longDescription as line}
+          {#each v.longDescription as line, idx (idx)}
             <p>{line}</p>
           {/each}
         {/if}
         {#if v.mainFeatures}
           <h2>The main features of this update are...</h2>
           <ul>
-            {#each v.mainFeatures as feature}
+            {#each v.mainFeatures as feature, idx (idx)}
               <li>{feature.text}</li>
             {/each}
           </ul>
@@ -90,19 +86,13 @@
         {#if v.minorFeatures}
           <h2>But it also brings...</h2>
           <ul>
-            {#each v.minorFeatures as feature}
+            {#each v.minorFeatures as feature, idx (idx)}
               <li>{feature.text}</li>
             {/each}
           </ul>
         {/if}
         {#if v.learnMore}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={v.learnMore.startsWith('@')
-              ? 'https://minecraft.wiki/w/' + v.learnMore.slice(1)
-              : v.learnMore}>Learn more about this {readableType(v.type)}</a
-          >
+          <a target="_blank" rel="noopener noreferrer" href={v.learnMore.startsWith('@') ? 'https://minecraft.wiki/w/' + v.learnMore.slice(1) : v.learnMore}>Learn more about this {readableType(v.type)}</a>
         {/if}
       </section>
     </div>
@@ -142,8 +132,7 @@
   .infopanel .top-bar {
     border: 12px solid transparent;
     border-bottom-width: 4px;
-    border-image: url('/borders/panel_book_top.png') 12 12 4 12 fill repeat
-      repeat;
+    border-image: url('/borders/panel_book_top.png') 12 12 4 12 fill repeat repeat;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

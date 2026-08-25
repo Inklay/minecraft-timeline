@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { NaiveVersion, Version } from '$lib/editions';
-  import { setReadingVersion } from '$lib/book.svelte';
-  import { hoveredVersions } from '$lib/tooltip.svelte';
+  import type { NaiveVersion, Version } from '$lib/editions'
+  import { setReadingVersion } from '$lib/book.svelte'
+  import { hoveredVersions } from '$lib/tooltip.svelte'
 
-  let { version }: { version: Version | NaiveVersion } = $props();
+  let { version }: { version: Version | NaiveVersion } = $props()
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -12,16 +12,16 @@
   class="version {version.type}"
   role="contentinfo"
   onclick={() => {
-    setReadingVersion(version);
+    setReadingVersion(version)
   }}
   onmouseenter={() => {
-    hoveredVersions.push(version);
+    hoveredVersions.push(version)
   }}
   onmouseleave={() => {
     for (let i = 0; i < hoveredVersions.length; i++) {
       if (hoveredVersions[i] === version) {
-        hoveredVersions.splice(i, 1);
-        break;
+        hoveredVersions.splice(i, 1)
+        break
       }
     }
   }}

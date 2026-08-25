@@ -1,13 +1,13 @@
-import type { NaiveVersion, Version } from "./editions";
+import type { NaiveVersion, Version } from './editions'
 
 export const readingVersion: {
-    version: Version | NaiveVersion | undefined
-} = $state({ version: undefined });
+  version: Version | NaiveVersion | undefined
+} = $state({ version: undefined })
 
 export function setReadingVersion(version: Version | NaiveVersion) {
-    readingVersion.version = version;
+  readingVersion.version = version
 }
 
 export function clearReadingVersion() {
-    readingVersion.version = undefined;
+  readingVersion.version = undefined
 }

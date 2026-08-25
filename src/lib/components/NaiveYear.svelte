@@ -1,15 +1,15 @@
 <script lang="ts">
-  import type { Edition, NaiveVersion } from '$lib/editions';
-  import Marker from './Marker.svelte';
+  import type { Edition, NaiveVersion } from '$lib/editions'
+  import Marker from './Marker.svelte'
 
   let {
     versions,
     isVertical,
   }: {
-    edition: Edition;
-    versions: NaiveVersion[];
-    isVertical: boolean;
-  } = $props();
+    edition: Edition
+    versions: NaiveVersion[]
+    isVertical: boolean
+  } = $props()
 </script>
 
 <div class="year {isVertical ? '' : 'horizontal'}">
@@ -17,8 +17,8 @@
     <div class="number">???</div>
     <div class="ago">Future</div>
   </div>
-  <div class="versions" style="--year: url({'"'}../years/future.png{'"'})">
-    {#each versions as version, i}
+  <div class="versions" style="--year: url(&quot;../years/future.png&quot;)">
+    {#each versions as version, idx (idx)}
       <div class="version">
         <Marker {version} />
       </div>
@@ -55,8 +55,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     flex: 1;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      var(--year), url('/years/fallback.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), var(--year), url('/years/fallback.png');
     box-shadow: inset 20px -20px 20px -10px rgb(0 0 0 / 43%);
     align-items: center;
     justify-content: center;

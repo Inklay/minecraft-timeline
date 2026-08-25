@@ -2,33 +2,23 @@
   <div class="content">
     <ul class="links">
       <li>
-        Created by <a href="http://github.com/henriquecolini">Henrique Colini</a
-        >
+        Originally created by <a href="http://github.com/henriquecolini">Henrique Colini</a>
       </li>
       <li>
         Contribute on
-        <a
-          href="http://github.com/minecraft-timeline/minecraft-timeline.github.io"
-          >GitHub</a
-        >
+        <a href="http://github.com/minecraft-timeline/minecraft-timeline.github.io">GitHub</a>
       </li>
       <li>
-        <a
-          href="https://old.reddit.com/r/Minecraft/comments/akco1t/seeing_as_a_lot_of_redditors_are_coming_back_to/"
-          >Original Reddit Post</a
-        >
+        <a href="https://old.reddit.com/r/Minecraft/comments/akco1t/seeing_as_a_lot_of_redditors_are_coming_back_to/">Original Reddit Post</a>
       </li>
     </ul>
     <div class="disclaimers">
       <p>
         <span class="line">This is not an official Minecraft website.</span>
-        <span class="line">We are not associated with Mojang or Microsoft.</span
-        >
+        <span class="line">We are not associated with Mojang or Microsoft.</span>
       </p>
       <p>
-        <span class="line"
-          >Any of the trademarks, copyrights or similar rights</span
-        >
+        <span class="line">Any of the trademarks, copyrights or similar rights</span>
         <span class="line">are the property of their respective owners.</span>
       </p>
     </div>
@@ -88,7 +78,6 @@
     content: '• ';
   }
 
-  
   @media (min-width: 768px) {
     .content {
       align-items: center;

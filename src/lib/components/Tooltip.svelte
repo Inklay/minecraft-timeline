@@ -1,55 +1,40 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import type { NaiveVersion, Version } from '$lib/editions';
+  import { onMount } from 'svelte'
+  import type { NaiveVersion, Version } from '$lib/editions'
 
   function clamp(value: number, min: number, max: number): number {
-    return Math.min(Math.max(value, min), max);
+    return Math.min(Math.max(value, min), max)
   }
-  let { version }: { version: Version | NaiveVersion } = $props();
+  let { version }: { version: Version | NaiveVersion } = $props()
   let { mouseX, mouseY } = $state({
     mouseX: 0,
     mouseY: 0,
-  });
-  let docWidth = $state(0);
-  let docHeight = $state(0);
-  let docTop = $state(0);
-  let docLeft = $state(0);
-  let tipWidth = $state(0);
-  let tipHeight = $state(0);
-  let windowScrollX = $state(0);
-  let windowScrollY = $state(0);
+  })
+  let docWidth = $state(0)
+  let docHeight = $state(0)
+  let docTop = $state(0)
+  let docLeft = $state(0)
+  let tipWidth = $state(0)
+  let tipHeight = $state(0)
+  let windowScrollX = $state(0)
+  let windowScrollY = $state(0)
   let { x, y }: { x: number; y: number } = $derived({
-    x:
-      clamp(
-        mouseX,
-        windowScrollX + tipWidth / 2,
-        windowScrollX + docWidth - tipWidth / 2,
-      ) + docLeft,
-    y:
-      clamp(
-        mouseY + tipHeight / 2 + 16,
-        windowScrollY + tipHeight / 2,
-        windowScrollY + docHeight - tipHeight / 2,
-      ) + docTop,
-  });
+    x: clamp(mouseX, windowScrollX + tipWidth / 2, windowScrollX + docWidth - tipWidth / 2) + docLeft,
+    y: clamp(mouseY + tipHeight / 2 + 16, windowScrollY + tipHeight / 2, windowScrollY + docHeight - tipHeight / 2) + docTop,
+  })
   onMount(() => {
-    docWidth = document.documentElement.clientWidth;
-    docHeight = document.documentElement.clientHeight;
-    docTop = document.documentElement.scrollTop;
-    docLeft = document.documentElement.scrollLeft;
-  });
+    docWidth = document.documentElement.clientWidth
+    docHeight = document.documentElement.clientHeight
+    docTop = document.documentElement.scrollTop
+    docLeft = document.documentElement.scrollLeft
+  })
   function isTouchDevice() {
-    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0
   }
 </script>
 
 {#if !isTouchDevice()}
-  <div
-    bind:offsetWidth={tipWidth}
-    bind:offsetHeight={tipHeight}
-    class="tooltip"
-    style="left: {x}px; top: {y}px;"
-  >
+  <div bind:offsetWidth={tipWidth} bind:offsetHeight={tipHeight} class="tooltip" style="left: {x}px; top: {y}px;">
     {#if version.title && version.subtitle}
       <div class="title">{version.title}</div>
       {#if version.description}
@@ -73,8 +58,8 @@
 {/if}
 <svelte:body
   onmousemove={(mouseEvent) => {
-    mouseX = mouseEvent.clientX;
-    mouseY = mouseEvent.clientY;
+    mouseX = mouseEvent.clientX
+    mouseY = mouseEvent.clientY
   }}
 />
 

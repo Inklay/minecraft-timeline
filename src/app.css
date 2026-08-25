@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Minecraft';
-  src: url("/fonts/Minecraft.woff2") format("woff2");
+  src: url('/fonts/Minecraft.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -19,12 +19,12 @@ h3,
 li,
 a,
 p {
-  font-family: "Minecraft", "Minecraftia", monospace, sans-serif;
+  font-family: 'Minecraft', 'Minecraftia', monospace, sans-serif;
   color: white;
 }
 
 body {
-  font-family: "Minecraft", "Minecraftia", monospace, sans-serif;
+  font-family: 'Minecraft', 'Minecraftia', monospace, sans-serif;
   overflow-x: hidden;
 }
 

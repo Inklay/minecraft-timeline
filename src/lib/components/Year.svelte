@@ -1,16 +1,16 @@
 <script lang="ts">
-  import type { Edition, Version } from '$lib/editions';
-  import Marker from './Marker.svelte';
+  import type { Edition, Version } from '$lib/editions'
+  import Marker from './Marker.svelte'
 
   function calculateSpaces(versions: { version: Version; ratio: number }[]) {
-    let spaces: number[] = [];
-    let total = 0;
+    let spaces: number[] = []
+    let total = 0
     for (let i = 0; i < versions.length; i++) {
-      spaces.push(versions[i].ratio - total);
-      total = versions[i].ratio;
+      spaces.push(versions[i].ratio - total)
+      total = versions[i].ratio
     }
-    spaces.push(1 - total);
-    return spaces;
+    spaces.push(1 - total)
+    return spaces
   }
 
   let {
@@ -21,21 +21,17 @@
     last,
     isVertical,
   }: {
-    year: number;
-    edition: Edition;
-    versions: { version: Version; ratio: number }[];
-    first: boolean;
-    last: boolean;
-    isVertical: boolean;
-  } = $props();
-  let spaces = $derived(calculateSpaces(versions));
+    year: number
+    edition: Edition
+    versions: { version: Version; ratio: number }[]
+    first: boolean
+    last: boolean
+    isVertical: boolean
+  } = $props()
+  let spaces = $derived(calculateSpaces(versions))
 </script>
 
-<div
-  class="year {first ? 'first' : ''} {last ? 'last' : ''} {isVertical
-    ? ''
-    : 'horizontal'}"
->
+<div class="year {first ? 'first' : ''} {last ? 'last' : ''} {isVertical ? '' : 'horizontal'}">
   <div class="ruler">
     <div class="number">{year}</div>
     <div class="ago">
@@ -46,13 +42,10 @@
       {/if}
     </div>
   </div>
-  <div
-    class="versions"
-    style="--year: url({'"'}../years/{edition.id}/{year}.png{'"'})"
-  >
-    {#each versions as { version, ratio }, i}
-      <div class="spacer" style="flex-grow: {spaces[i]};"></div>
-      {#if first && i === 0}
+  <div class="versions" style="--year: url(&quot;../years/{edition.id}/{year}.png&quot;)">
+    {#each versions as { version, ratio }, idx (ratio)}
+      <div class="spacer" style="flex-grow: {spaces[idx]};"></div>
+      {#if first && idx === 0}
         <div class="first-message"><span>{edition.firstMessage}</span></div>
         <div class="spacer" style="flex-grow: 0.05;"></div>
       {/if}
@@ -119,8 +112,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     flex: 1;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      var(--year), url('/years/fallback.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), var(--year), url('/years/fallback.png');
     box-shadow: inset 20px -20px 20px -10px rgb(0 0 0 / 43%);
     align-items: center;
   }

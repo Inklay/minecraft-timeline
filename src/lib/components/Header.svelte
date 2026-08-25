@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { Edition } from '$lib/editions';
-  import { editions } from '$lib/editions';
+  import type { Edition } from '$lib/editions'
+  import { editions } from '$lib/editions'
 
-  let isBig = $state(false);
+  let isBig = $state(false)
   let {
     chosenEdition = $bindable(),
     enableMajors = $bindable(),
@@ -11,26 +11,26 @@
     enableEvents = $bindable(),
     isVertical = $bindable(),
   }: {
-    chosenEdition: Edition;
-    enableMajors: boolean;
-    enableMinors: boolean;
-    enableDrops: boolean;
-    enableEvents: boolean;
-    isVertical: boolean;
-  } = $props();
-  let toolbox = $state(false);
-  let editionIndex = $state(0);
-  handleResize();
+    chosenEdition: Edition
+    enableMajors: boolean
+    enableMinors: boolean
+    enableDrops: boolean
+    enableEvents: boolean
+    isVertical: boolean
+  } = $props()
+  let toolbox = $state(false)
+  let editionIndex = $state(0)
+  handleResize()
   function handleResize() {
-    isBig = window.matchMedia('(min-width: 768px)').matches;
+    isBig = window.matchMedia('(min-width: 768px)').matches
   }
 </script>
 
 {#snippet editionToggle()}
   <button
     onclick={() => {
-      editionIndex = (editionIndex + 1) % editions.length;
-      chosenEdition = editions[editionIndex];
+      editionIndex = (editionIndex + 1) % editions.length
+      chosenEdition = editions[editionIndex]
     }}>{chosenEdition.title}</button
   >
 {/snippet}
@@ -40,22 +40,12 @@
     {#if !isBig}
       {@render editionToggle()}
     {/if}
-    <button onclick={() => (enableMajors = !enableMajors)}
-      >Major Updates: {enableMajors ? 'ON' : 'OFF'}</button
-    >
-    <button onclick={() => (enableMinors = !enableMinors)}
-      >Minor Updates: {enableMinors ? 'ON' : 'OFF'}</button
-    >
-    <button onclick={() => (enableDrops = !enableDrops)}
-      >Game Drops: {enableDrops ? 'ON' : 'OFF'}</button
-    >
-    <button onclick={() => (enableEvents = !enableEvents)}
-      >Events: {enableEvents ? 'ON' : 'OFF'}</button
-    >
+    <button onclick={() => (enableMajors = !enableMajors)}>Major Updates: {enableMajors ? 'ON' : 'OFF'}</button>
+    <button onclick={() => (enableMinors = !enableMinors)}>Minor Updates: {enableMinors ? 'ON' : 'OFF'}</button>
+    <button onclick={() => (enableDrops = !enableDrops)}>Game Drops: {enableDrops ? 'ON' : 'OFF'}</button>
+    <button onclick={() => (enableEvents = !enableEvents)}>Events: {enableEvents ? 'ON' : 'OFF'}</button>
     {#if isBig}
-      <button onclick={() => (isVertical = !isVertical)}
-        >Layout: {isVertical ? 'Vertical' : 'Horizontal'}</button
-      >
+      <button onclick={() => (isVertical = !isVertical)}>Layout: {isVertical ? 'Vertical' : 'Horizontal'}</button>
     {/if}
   </div>
   <div class="content">
@@ -65,11 +55,7 @@
     {#if isBig}
       {@render editionToggle()}
     {/if}
-    <button
-      class="hamburger"
-      aria-label="hamburger"
-      onclick={() => (toolbox = !toolbox)}
-    ></button>
+    <button class="hamburger" aria-label="hamburger" onclick={() => (toolbox = !toolbox)}></button>
   </div>
 </header>
 
