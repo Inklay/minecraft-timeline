@@ -210,4 +210,28 @@ export const drops: Version[] = [
       { text: 'Geysers' },
     ],
   },
+
+  {
+    title: 'Wilderness Bound',
+    subtitle: '26.3',
+    description: 'Concrete and wool stairs and slabs, poplar wood set, dappled forest biome, cushions',
+    funFact: 'Did you know? The name of this drop was announced during the Fall Starts MC Championship.',
+    type: 'drop',
+    date: '2026-09-15',
+    icon: '/java/version_26_3.png',
+    learnMore: '@Java_Edition_26.3',
+    mainFeatures: [
+      { text: 'Concrete stairs and slabs' },
+      { text: 'Wool stairs and slabs' },
+      { text: 'Poplar wood set' },
+      { text: 'Dappled forest biome' },
+      { text: 'Cushions' },
+    ],
+    minorFeatures: [
+      { text: 'New explorer maps' },
+      { text: 'Straw bed' },
+      { text: 'Shelf mushroom' },
+      { text: 'Abandoned camp' },
+    ],
+  },
 ] as const
