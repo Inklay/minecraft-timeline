@@ -2,7 +2,7 @@ import type { Edition } from '..'
 import { majors } from './majors'
 import { minors } from './minors'
 import { drops } from './drops'
-import { events } from '../common/events'
+import { events, upcomingEvents } from '../common/events'
 import { upcomings } from './upcomings'
 
 export const bedrock: Edition = {
@@ -10,5 +10,5 @@ export const bedrock: Edition = {
   title: 'Bedrock Edition',
   firstMessage: 'Bedrock Edition is born',
   versions: [...majors, ...minors, ...drops, ...events],
-  upcomings,
+  upcomings: [...upcomings, ...upcomingEvents]
 } as const

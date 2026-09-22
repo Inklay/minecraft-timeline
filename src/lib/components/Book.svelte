@@ -21,7 +21,7 @@
     }
   }
   function formatDate(date: string) {
-    return formatter.format(parseDate(date))
+    return formatter.format(parseDate(date)) || undefined
   }
   $effect(() => {
     if (readingVersion.version) {
@@ -49,8 +49,8 @@
         {#if 'date' in v}
           <span class="date">{formatDate(v.date)}</span>
         {/if}
-        {#if !('date' in v) && 'possibleDate' in v}
-          <span class="date">{v.possibleDate}</span>
+        {#if !('date' in v) && 'possibleDate' in v && v.possibleDate}
+          <span class="date">{formatDate(v.possibleDate) || v.possibleDate}</span>
         {/if}
         <button class="close" aria-label="Close Info Panel" onclick={clearReadingVersion}></button>
       </div>

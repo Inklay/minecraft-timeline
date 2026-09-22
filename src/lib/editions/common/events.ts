@@ -1,4 +1,4 @@
-import type { Version } from '..'
+import type { NaiveVersion, Version } from '..'
 
 export const events: Version[] = [
   {
@@ -75,8 +75,48 @@ export const events: Version[] = [
     longDescription: [
       'On November of 2014, all of Mojang was acquired by Microsoft for $2.5 billion. This included Minecraft, of course.',
       'The process began a few months earlier. Many suspected this acquisition was happening, but Mojang only confirmed it on September.',
-      "According to Notch, he sold Mojang because he didn't want the responsibility of owning a company of such global significance.",
+      'According to Notch, he sold Mojang because he didn\'t want the responsibility of owning a company of such global significance.',
       'As soon as Mojang was sold, Notch and the other two founders (Carl and Jakob) left the company.',
     ],
   },
+
+    {
+    title: 'Minecraft Live March 2026',
+    type: 'event',
+    date: '2026-03-21',
+    icon: 'common/event_live.png',
+    learnMore: '@Minecraft_LIVE_-_March_2026',
+    longDescription: [
+      'The first Minecraft Live of 2026.',
+      'This event announced the new Minecraft Dungeons II game and a a theme park called "Minecraft World" that will be built in the United Kingdom at Chessington.',
+      'The live also announced the new drop "Chaos Cubed" which released a few months later.'
+    ],
+  },
+
+  {
+    title: 'Minecraft Live May 2026',
+    type: 'event',
+    date: '2026-05-30',
+    icon: 'common/event_live.png',
+    learnMore: '@Minecraft_LIVE_-_May_2026',
+    longDescription: [
+      'The second Minecraft Live of 2026, which was be held in May 2026 during TwitchCon Rotterdam 2026.',
+      'This even was categorized as a "bonus" live.',
+      'It contained new information on Minecraft Dungeons II as well as the name for the second Minecraft Movie "A Minecraft Movie Squared"',
+      'This event also introduced us to the new Wilderness Bound drop'
+    ],
+  },
+] as const
+
+export const upcomingEvents: NaiveVersion[] = [
+  {
+    title: 'Minecraft Live September 2026',
+    type: 'event',
+    possibleDate: '2026-09-26',
+    icon: 'common/event_live.png',
+    learnMore: '@Minecraft_LIVE_-_September_2026',
+    longDescription: [
+      'The third Minecraft Live of 2026, which will be held in September 2026.'
+    ],
+  }
 ] as const
