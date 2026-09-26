@@ -106,17 +106,21 @@ export const events: Version[] = [
       'This event also introduced us to the new Wilderness Bound drop'
     ],
   },
-] as const
 
-export const upcomingEvents: NaiveVersion[] = [
   {
     title: 'Minecraft Live September 2026',
     type: 'event',
-    possibleDate: '2026-09-26',
+    date: '2026-09-26',
     icon: 'common/event_live.png',
     learnMore: '@Minecraft_LIVE_-_September_2026',
     longDescription: [
-      'The third Minecraft Live of 2026, which will be held in September 2026.'
+      'The third Minecraft Live of 2026, which was be held in September 2026.',
+      'This event showed us some news about Minecraft Dungeons II and the Minecraft World theme park',
+      'It Also contained new information on the upcoming 2026 winter drop, which will add a new "ice cave" biome with a new frozen zombie variant.',
+      'Finally it also announced that the "Sift" dimension that was already shown in Minecraft Dungeons II will be added to the main game in a future update that will be released in 2027.'
     ],
   }
+] as const
+
+export const upcomingEvents: NaiveVersion[] = [
 ] as const
