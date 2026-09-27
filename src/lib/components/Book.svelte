@@ -21,7 +21,11 @@
     }
   }
   function formatDate(date: string) {
-    return formatter.format(parseDate(date)) || undefined
+    try {
+      return formatter.format(parseDate(date))
+    } catch (e) {
+      return undefined
+    }
   }
   $effect(() => {
     if (readingVersion.version) {
