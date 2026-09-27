@@ -2445,7 +2445,7 @@ export const minors: Version[] = [
   {
     subtitle: '26.51',
     type: 'minor',
-    date: '2026-09-15',
+    date: '2026-09-15 01:00:00',
     learnMore: '@Bedrock_Edition_26.51',
     mainFeatures: [
       { text: 'Small Changes and Bug Fixes' },

@@ -209,7 +209,7 @@ export const drops: Version[] = [
     description: 'Concrete and wool stairs and slabs, poplar wood set, dappled forest biome, cushions',
     funFact: 'Did you know? The name of this drop was announced during the Fall Starts MC Championship.',
     type: 'drop',
-    date: '2026-09-15',
+    date: '2026-09-15 00:00:00',
     icon: '/bedrock/version_26_5.png',
     learnMore: '@Bedrock_Edition_26.50',
     mainFeatures: [
