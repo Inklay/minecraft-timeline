@@ -1,7 +1,7 @@
 import { java } from './java'
 import { bedrock } from './bedrock'
 
-export type VersionType = 'major' | 'minor' | 'drop' | 'event'
+export type VersionType = 'major' | 'minor' | 'drop' | 'event' | 'game'
 
 export type NaiveVersion = {
   title?: string
@@ -37,6 +37,8 @@ export function readableType(type: VersionType): string {
       return 'game drop'
     case 'event':
       return 'event'
+    case 'game':
+      return 'game'
   }
 }
 

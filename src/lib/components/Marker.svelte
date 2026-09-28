@@ -9,7 +9,7 @@
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <div
-  class="version {version.type}"
+  class="version {version.type === 'game' ? 'event' : version.type}"
   role="contentinfo"
   onclick={() => {
     setReadingVersion(version)

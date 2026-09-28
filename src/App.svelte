@@ -40,7 +40,10 @@
     if (enableMajors) types.push('major')
     if (enableMinors) types.push('minor')
     if (enableDrops) types.push('drop')
-    if (enableEvents) types.push('event')
+    if (enableEvents) {
+      types.push('event')
+      types.push('game')
+    }
     return types
   }
 

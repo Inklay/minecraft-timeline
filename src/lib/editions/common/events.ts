@@ -80,7 +80,20 @@ export const events: Version[] = [
     ],
   },
 
-    {
+  {
+    title: 'Minecraft Dungeons',
+    type: 'game',
+    date: '2020-05-26',
+    icon: 'common/event_dungeons.png',
+    learnMore: '@Minecraft_Dungeons',
+    longDescription: [
+      'Minecraft Dungeons is a dungeon crawler game set in the Minecraft universe, which was released on May 26th, 2020.',
+      'This game received a lot of additional content after its release, including new dungeons, enemies, and mechanics.',
+      'The last update for this game was released in 2023.',
+    ],
+  },
+
+  {
     title: 'Minecraft Live March 2026',
     type: 'event',
     date: '2026-03-21',
@@ -123,4 +136,15 @@ export const events: Version[] = [
 ] as const
 
 export const upcomingEvents: NaiveVersion[] = [
+  {
+    title: 'Minecraft Dungeons II',
+    type: 'game',
+    possibleDate: '2026-09-29',
+    icon: 'common/event_dungeonsII.png',
+    learnMore: '@Minecraft_Dungeons_II',
+    longDescription: [
+      'The second installment of the Minecraft Dungeons series, which will be released in September 2026.',
+      'This game was announced during the first Minecraft Live of 2026 and will feature new dungeons, enemies, and mechanics.',
+    ],
+  }
 ] as const
