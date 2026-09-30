@@ -132,19 +132,20 @@ export const events: Version[] = [
       'It Also contained new information on the upcoming 2026 winter drop, which will add a new "ice cave" biome with a new frozen zombie variant.',
       'Finally it also announced that the "Sift" dimension that was already shown in Minecraft Dungeons II will be added to the main game in a future update that will be released in 2027.'
     ],
-  }
-] as const
+  },
 
-export const upcomingEvents: NaiveVersion[] = [
   {
     title: 'Minecraft Dungeons II',
     type: 'game',
-    possibleDate: '2026-09-29',
+    date: '2026-09-29',
     icon: 'common/event_dungeonsII.png',
     learnMore: '@Minecraft_Dungeons_II',
     longDescription: [
       'The second installment of the Minecraft Dungeons series, which will be released in September 2026.',
-      'This game was announced during the first Minecraft Live of 2026 and will feature new dungeons, enemies, and mechanics.',
+      'This game was announced during the first Minecraft Live of 2026 and features new dungeons, enemies, and mechanics.',
     ],
   }
+] as const
+
+export const upcomingEvents: NaiveVersion[] = [
 ] as const
